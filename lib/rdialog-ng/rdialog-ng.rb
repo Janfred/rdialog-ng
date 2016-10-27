@@ -1,17 +1,16 @@
 
 #                                vim:ts=4:sw=4:
-# = rdialog - A dialog gem for Ruby
+# = rdialog-ng - A dialog gem for Ruby
 #
-# Homepage::  http://built-it.net/ruby/rdialog/
-# Author::    Aleks Clark (http://built-it.net)
-# Copyright:: (cc) 2004 Aleks Clark
-# License::   BSD
+# Homepage::  https://github.com/Janfred/rdialog-ng
+# Author::    Jan-Frederik Rieckers
+# Copyright:: (cc) 2016 Jan-Frederik Rieckers
+# License::   MIT
 #
-# class RDialog::Dialog.new( array, str, array)
 
 require 'tempfile'
 require 'date'
-class RDialog
+class RDialogNG
 	#.
 
 	# All accessors are boolean unless otherwise noted.
