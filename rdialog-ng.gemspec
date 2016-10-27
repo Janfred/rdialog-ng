@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
     "lib/rdialog-ng.rb",
     "lib/rdialog-ng/rdialog-ng.rb",
     "lib/rdialog-ng/version.rb",
+    "VERSION",
   ]
   s.homepage = "https://github.com/rieckers/rdialog-ng"
   s.summary = "A gem providing a ruby interface to the n-curses dialog generator - 'dialog'."
