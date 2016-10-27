@@ -452,6 +452,8 @@ attr_accessor :timeout
         opt = "--tailbox"
       when "bg"
         opt = "--textboxbg"
+      when "edit"
+        opt = "--editbox"
     end
 
     command = option_string() + opt +" \"" + file.to_s +
