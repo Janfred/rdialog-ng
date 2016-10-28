@@ -9,3 +9,4 @@ This gem was developed by Matt Scilipoti, Lucas Vieira and Aleks Clark. This for
 == Copyright
 
 Copyright (c) 2016 Jan-Frederik Rieckers. See LICENSE for details.
+Copyright of the original version: (c) 2013 Aleks Clark
