@@ -177,7 +177,7 @@ attr_accessor :timeout
       end
     end
 
-    command = option_string() + "--checklist \"" + text.to_s +
+    command = option_string() + "--separate-output --checklist \"" + text.to_s +
       "\" " + height.to_i.to_s + " " + width.to_i.to_s +
       " " + listheight.to_i.to_s + " " + itemlist + "2> " +
       tmp.path
@@ -185,15 +185,10 @@ attr_accessor :timeout
     success = system(command)
     puts success
     if success
-      selected_string = tmp.readline
-      tmp.close!
-      selected_string.slice!(0)
-      selected_string.chomp!("\"")
-      selected_array = selected_string.split('" "')
-      for item in selected_array
-        item.delete!("\\")
+      selected_array = []
+      while !tmp.eof? do
+        selected_array[] = tmp.readline.strip
       end
-
       return selected_array
     else
       tmp.close!
