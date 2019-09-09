@@ -445,6 +445,8 @@ attr_accessor :timeout
   #    'h' and 'l', or arrow-keys.  A '0' resets the scrolling.
 
   def textbox(file, type="text", height=0, width=0)
+    temp = Tempfile.new('tmp')
+
     case type
       when "text"
         opt = "--textbox"
@@ -457,11 +459,18 @@ attr_accessor :timeout
     end
 
     command = option_string() + opt +" \"" + file.to_s +
-      "\" " + height.to_i.to_s + " " + width.to_i.to_s + " "
+      "\" " + height.to_i.to_s + " " + width.to_i.to_s + " 2>" + temp.path
 
     success = system(command)
 
-    return success
+    if success
+      data = temp.read()
+      temp.close!
+      return data
+    else
+      temp.close!
+      return success
+    end
   end
 
   #  A dialog is displayed which allows you to select  hour,  minute
