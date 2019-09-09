@@ -187,7 +187,7 @@ attr_accessor :timeout
     if success
       selected_array = []
       while !tmp.eof? do
-        selected_array[] = tmp.readline.strip
+        selected_array << tmp.readline.strip
       end
       return selected_array
     else
