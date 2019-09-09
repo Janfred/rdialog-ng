@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "rdialog-ng"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.authors = ["Aleks Clark", "Matt Scilipoti", "Lucas Vieira", "Jan-Frederik Rieckers"]
   s.date = "2016-10-27"
